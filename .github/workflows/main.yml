@@ -25,6 +25,8 @@ jobs:
         with:
           java-version: '11'
       - name: Step 3 - Have GitHub Action Build Maven Projects
+        run: mvn -B package --file pom.xml
+      - name: Step 4 - List the current directory
         run: ls -a
       - name: Step 5 - What is the target folder?
         run: |
